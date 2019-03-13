@@ -14,4 +14,4 @@ COPY . /app
 
 ENTRYPOINT ["python"]
 
-CMD ["/TWpred/app.py"]
+CMD ["/app/TWpred/app.py"]
