@@ -12,6 +12,8 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT ["python"]
+WORKDIR /app/TWpred
 
-CMD ["/app/TWpred/app.py"]
+ENV FLASK_APP=TWpred:APP
+
+CMD ["flask run"]
