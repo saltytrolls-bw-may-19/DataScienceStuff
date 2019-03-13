@@ -1,6 +1,6 @@
 """ Main application and routing logic for TweetR """
 from flask import Flask, request, render_template
-from .functions import textblob_sentiment
+from functions import textblob_sentiment
 
 """ create + config Flask app obj """
 app = Flask(__name__)
