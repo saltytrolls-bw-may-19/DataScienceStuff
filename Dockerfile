@@ -4,7 +4,7 @@ RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y python-pip python-dev
 
-COPY ./requirements.test /app/requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
