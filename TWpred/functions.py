@@ -44,7 +44,7 @@ def textblob_sentiment(author):
 
     # submit query and make a list of results
     query_job = client.query(query)
-    iterator = query_job.result(timeout=30)
+    iterator = query_job.result(timeout=90)
     rows = list(iterator)
 
     # Exception handling:  bug out if no comments found
