@@ -1,0 +1,14 @@
+<div class="jumbotron">
+    <h1 class="display-5">TWpredictR</h1>
+    <p class="lead">Tweet Analysis Platform</p>
+    <hr class="my-5">
+</div>
+
+
+
+<h3>Tweets currently in the DB</h3>
+<ul>
+    {% for tweet in tweets %}
+    <li>{{tweet.text}}</li>
+    {% endfor %}
+</ul>

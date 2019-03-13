@@ -1,0 +1,1 @@
+web: gunicorn TWpred:APP -t 120
