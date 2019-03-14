@@ -30,10 +30,7 @@ def textblob_sentiment(author):
     # LOCAL authenticate with google
     jsonPath = "env.py"
     client = bigquery.Client.from_service_account_json(jsonPath)
-    
-    # HEROKU  authenticate with google ->  uses config vars in dashboard
-    #client = bigquery.Client()
-    
+
     # Construct SQL query
     # Using WHERE reduces the amount of data scanned / quota used
     query = """
@@ -64,15 +61,15 @@ def textblob_sentiment(author):
     #  (Mean of all comment sentiment, unweighted.)
     output1 = df.groupby('author', as_index=False)[['sentiment']].mean()
     dfJSON = output1.to_json(orient='records')
-    output1JSON = dfJSON[0:-2]
-    output1JSON = output1JSON + ',"num_comments":' + str(len(df)) + '}]'
+    part1JSON = dfJSON[1:-2]
+    part1JSON = '{"user":' + part1JSON + ',"num_comments":' + str(len(df)) + '},"comments":'
 
     # Output 2: Top 10 Saltiest Records
     output2 = df[['author', 'sentiment', 'ranking', 'time', 'comment']][0:9]
-    output2JSON = output2.to_json(orient='records')
+    part2JSON = output2.to_json(orient='records')
     
     # may have to output as stdout for node.js integration
     # print (output1JSON, output2JSON)
     # sys.stdout.flush()
-
-    return (output1JSON + output2JSON)
+    outJSON = part1JSON + part2JSON + '}'
+    return outJSON
