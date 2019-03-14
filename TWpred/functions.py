@@ -68,8 +68,5 @@ def textblob_sentiment(author):
     output2 = df[['author', 'sentiment', 'ranking', 'time', 'comment']][0:9]
     part2JSON = output2.to_json(orient='records')
     
-    # may have to output as stdout for node.js integration
-    # print (output1JSON, output2JSON)
-    # sys.stdout.flush()
     outJSON = part1JSON + part2JSON + '}'
     return outJSON
