@@ -19,7 +19,7 @@ def root():
 @app.route('/user/<name>')
 def user(name=None):
     json_out = textblob_sentiment(name)
-    return type(json_out)
+    return (json_out)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
