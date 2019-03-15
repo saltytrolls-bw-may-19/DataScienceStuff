@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "E:\\ProgramData\\Anaconda3\\envs\\environ1\\python.exe"
+    "python.pythonPath": "E:\\ProgramData\\Anaconda3\\envs\\environ1\\python.exe",
+    "sqltools.connections": []
 }

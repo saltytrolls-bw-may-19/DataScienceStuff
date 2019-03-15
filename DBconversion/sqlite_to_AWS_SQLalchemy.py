@@ -17,7 +17,7 @@ def verify_output(pgres_engine, table_name):
 def run_conversion(pgres_engine):
     # ___ process tables ____
     # - WARNING!  schema must already exist
-    schema_name = 'public'
+    schema_name = 'lambdaRPG'
     tables = ['commentor_data']
 
     # ___ connect to  sqlite3  ____
