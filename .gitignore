@@ -12,6 +12,12 @@ __pycache__/
 # password files
 *.pwd
 
+# data files
+*.csv
+
+# sqlite
+*.db
+
 # Distribution / packaging
 .Python
 build/
