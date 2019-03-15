@@ -7,3 +7,5 @@ The ./usr/<kacker-id>  URL accepts a hacker-id,  gets comment data via the API c
 Hacker-Name, overall sentiment score, number of comments, and a list of the top 10 most negative comments with individual sentiment scores are returned.
 
 Image can be created with the included DockerFile 
+
+The .arvo file of the processed data can be downloaded here: https://drive.google.com/file/d/1JiMnZnpQ-GfTt2FxaFAEC4Hdi9WM8xim/view?usp=sharing
