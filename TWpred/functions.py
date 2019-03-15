@@ -67,6 +67,6 @@ def textblob_sentiment(author):
     # Output 2: Top 10 Saltiest Records
     output2 = df[['author', 'sentiment', 'ranking', 'time', 'comment']][0:9]
     part2JSON = output2.to_json(orient='records')
-    
+
     outJSON = part1JSON + part2JSON + '}'
     return outJSON

@@ -9,6 +9,9 @@ __pycache__/
 # JSON
 *.json
 
+# password files
+*.pwd
+
 # Distribution / packaging
 .Python
 build/
