@@ -23,3 +23,9 @@ def user(name=None):
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0')
+    # app.run(debug=True)
+
+#  to run from terminal : 
+#      change line 25 to  app.run(debug=True)
+#      cd to TWpred subfolder (where app.py resides)
+#      run >python app.py 
