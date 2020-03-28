@@ -46,6 +46,7 @@ def run_conversion(pgres_engine):
 
 def main():
     # __ Connect to postgres (SQLalchemy.engine) ____
+    # _TODO   use dotenv !
     dbname = ''
     user = ''
     host = ''
