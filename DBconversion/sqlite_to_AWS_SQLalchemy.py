@@ -25,7 +25,7 @@ def run_conversion(pgres_engine):
                                 module=sqlite)
 
     for table_name in tables:
-        print('converting........ ', table_name)
+        print('converting...... ', table_name)
         # ___ load SQlite into df   ____
         df = pd.read_sql_table(table_name,
                                con=lite_engine)
